@@ -10,3 +10,14 @@
   background-color: grey;
   color: white;
 }
+
+.list {
+  border: 1px solid black;
+  max-width: 200px;
+  width: auto;
+  margin-top: 10px;
+  padding: 5px;
+  overflow-x: scroll;
+  overflow-y: scroll;
+  max-height: 300px;
+}
