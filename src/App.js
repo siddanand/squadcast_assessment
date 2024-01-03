@@ -4,6 +4,7 @@ import Users from "./data_models/users.json";
 import { userSelect } from "./helpers/userSelect";
 import { searchUser } from "./helpers/searchUser";
 import UserList from "./components/userList";
+import InputField from "./components/inputField";
 
 function App() {
   const [activeList, setActiveList] = useState(Users);
@@ -26,13 +27,7 @@ function App() {
   };
   return (
     <div className="App">
-      <input
-        ref={inputRef}
-        style={{ width: "100%" }}
-        type="text"
-        placeholder="Mention"
-        onChange={(e) => onTextType(e.target.value)}
-      />
+      <InputField value={{inputRef, onTextType}}/>
       {showList ? <UserList value={{ activeList, onSelectUser }} /> : null}
     </div>
   );
